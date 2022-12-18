@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* 
+{
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto";
+    box-sizing: border-box;
+    overflow-y: hidden; /* Hide vertical scrollbar */
+    overflow-x: hidden; /* Hide horizontal scrollbar */
+}
+
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: gray;
+}
+
+section
+{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    flex-wrap: wrap;
+}
+
+section::before
+{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(black, green, black );
+    animation: aimate 5s linear infinite;
+}
+
+section span
+{
+    position: relative;
+    display: block;
+    width: calc(6.25vw - 2px);
+    height: calc(6.25vw - 2px);
+    background: black;
+    z-index: 2;
+    transition: 1.5s;
+}
+
+section span:hover
+{
+    background: green;
+    transition: 0s;
+}
+
+section .singnin
+ {
+    position: absolute;
+    padding: 40px;
+    border-radius: 4px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+    background: white;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+section .singnin .content
+{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    top: -35px;
+    
+}
+
+section .singnin .content h2 
+{
+    color: green;
+    
+}
+
+section .singnin .form
+{   
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    gap: 10px;
+}
+
+section .singnin .form .inputBox
+{
+    width: 100%;
+    position: relative;    
+}
+
+section .singnin .form .inputBox input
+{
+    position: relative;
+    width: 100%;
+    background: grey;
+    border: none;
+    outline: none;
+    padding: 25px 10px 7.5px;
+    border-radius: 4px;
+    color: black;
+    font-size: 14px;
+}
+
+section .singnin .form .inputBox i
+{
+    position: absolute;
+    left: 0;
+    padding: 15px 10px;
+    color: white;
+    transition: 0.5s;   
+    pointer-events: none;
+}
+
+section .singnin .form .inputBox input:focus ~ i,
+section .singnin .form .inputBox input:valid ~ i
+{
+    transform: translateY(-7.5px);
+    font-size: 14px;
+    color: green;
+}
+
+section .singnin .form .links {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section .singnin .form .links a
+{
+    font-style: none;
+    text-decoration: none;
+}
+
+section .singnin .form .links a:hover
+{
+    color: red;
+}
+
+section .singnin .form .inputBox input[type="button"]
+{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    background: green;
+    font-size: 20px;
+    border-radius: 20px;  
+}
+
+section .singnin .form .inputBox input[type="button"]:hover
+{
+    background: red;
+    cursor: pointer;
+}
+
